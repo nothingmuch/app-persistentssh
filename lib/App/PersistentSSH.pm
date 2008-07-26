@@ -121,7 +121,7 @@ sub is_reachable {
 
 	$self->logger->debug("scutil -r $host: $out");
 
-	if ( $out =~ m/Directly Reachable Address/ ) {
+	if ( $out =~ /^Reachable/ and not /Connection (?:Required|Automatic)/ ) {
 		$self->logger->debug("$host reachable");
 		return 1;
 	} else {
