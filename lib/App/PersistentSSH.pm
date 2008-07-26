@@ -3,7 +3,7 @@
 package App::PersistentSSH;
 
 use MooseX::POE;
-use Poe::Wheel::Run;
+use POE::Wheel::Run;
 
 use namespace::clean -except => 'meta';
 
