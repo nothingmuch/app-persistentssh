@@ -312,11 +312,48 @@ L<http://lingon.sourceforge.net/>. I use:
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/perl</string>
-		<string>/Users/nothingmuch/Perl/App-PersistentSSH/lib/App/PersistentSSH.pm</string>
+		<string>/Users/nothingmuch/Perl/App-PersistentSSH/bin/persisshtent</string>
 		<string>--verbose</string>
 		<string>--host</string>
 		<string>pasta.woobling.org</string>
 	</array>
+
+=head1 ATTRIBUTES
+
+=over 4
+
+=item host
+
+The host to connect to. Must be a valid ipaddress/hostname, not just an ssh
+config host entry.
+
+=item ssh_verbose
+
+Pass C<-v> to ssh.
+
+=item ssh_opts
+
+Additional options for ssh, useful for tunnelling etc.
+
+=back
+
+=head1 METHODS
+
+=over 4
+
+=item new
+
+=item new_with_options
+
+Spawn the POE component.
+
+C<new_with_options> comes from L<MooseX::Getopt>.
+
+=item run
+
+Calls L<POE::Kernel/run>.
+
+=back
 
 =head1 VERSION CONTROL
 
