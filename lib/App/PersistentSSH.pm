@@ -174,10 +174,11 @@ event spawn_command => sub {
 };
 
 event start_ssh => sub {
-	my $self = $_[OBJECT];
+	my ( $self, $kernel ) = @_[OBJECT, KERNEL];
 
 	unless ( $self->is_running ) {
 		$self->call(spawn_command => "ssh");
+		$kernel->sig( INT => "stop_ssh" );
 	}
 };
 
