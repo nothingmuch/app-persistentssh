@@ -266,6 +266,10 @@ __END__
 App::PersistentSSH - Kick an F<ssh> control master around on OSX using
 F<scutil>
 
+=head1 SYNOPSIS
+
+	% persisshtent --host your.host.com
+
 =head1 DESCRIPTION
 
 This POE component will keep an SSH control master alive, depending on network status.
