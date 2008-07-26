@@ -12,6 +12,10 @@ WriteMakefile(
 	PL_FILES     => { },
 	PREREQ_PM    => {
 		'Test::use::ok' => 0,
+		'MooseX::POE' => 0,
+		'MooseX::Getopt' => '0.15',
+		'MooseX::LogDispatch' => 0,
+		'namespace::clean' => 0,
 	},
 );
 
